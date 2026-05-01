@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.sahred.config.ServiceConfig;
+import com.example.demo.sahred.enumeration.ServiceNameCatalog;
 
 import lombok.Setter;
 
@@ -30,7 +30,7 @@ public class ServiceUrlUtility {
 	 * @param config ServiceConfig
 	 * @return URL
 	 */
-	public String getUrl(ServiceConfig config) {
+	public String getUrl(ServiceNameCatalog config) {
 		return map.get(config.getServiceName());
 	}
 }
