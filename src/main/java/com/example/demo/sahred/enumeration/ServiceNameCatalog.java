@@ -1,4 +1,4 @@
-package com.example.demo.sahred.config;
+package com.example.demo.sahred.enumeration;
 
 import lombok.Getter;
 
@@ -6,7 +6,7 @@ import lombok.Getter;
  * サービス定義
  */
 @Getter
-public enum ServiceConfig {
+public enum ServiceNameCatalog {
 
 	/** sandbox-service */
 	SANDBOX_SERVICE("sandbox-service"),
@@ -20,7 +20,7 @@ public enum ServiceConfig {
 	 * 
 	 * @param serviceName サービス名
 	 */
-	private ServiceConfig(String serviceName) {
+	private ServiceNameCatalog(String serviceName) {
 		this.serviceName = serviceName;
 	}
 
