@@ -14,8 +14,8 @@ java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(25)
 	}
-    withSourcesJar()
-    withJavadocJar()
+	withSourcesJar()
+	withJavadocJar()
 }
 
 repositories {
@@ -44,20 +44,20 @@ tasks.named('test') {
 }
 
 bootJar {
-    enabled = false
+	enabled = false
 }
 
 jar {
-    enabled = true
+	enabled = true
 }
 
 publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = "${project.group}"
-            artifactId = "${project.name}"
-            version = "${project.version}"
-            from components.java
+	publications {
+		maven(MavenPublication) {
+			groupId = "${project.group}"
+			artifactId = "${project.name}"
+			version = "${project.version}"
+			from components.java
 
 			// dependency-managementで依存のversion解決をさせたい場合は必須
 			versionMapping {
@@ -68,6 +68,6 @@ publishing {
 					fromResolutionResult()
 				}
 			}
-        }
-    }
+		}
+	}
 }

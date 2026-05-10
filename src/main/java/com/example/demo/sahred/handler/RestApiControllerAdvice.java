@@ -17,8 +17,9 @@ public class RestApiControllerAdvice extends ResponseEntityExceptionHandler {
 	/**
 	 * プライベートコンストラクタ(警告抑止)
 	 */
-	private RestApiControllerAdvice() {}
-	
+	private RestApiControllerAdvice() {
+	}
+
 	/**
 	 * Exception時は500 Internal Server Error
 	 * 
@@ -26,10 +27,10 @@ public class RestApiControllerAdvice extends ResponseEntityExceptionHandler {
 	 * @return ResponseEntity
 	 */
 	@ExceptionHandler(Exception.class)
-		public ResponseEntity<Object> handleFileNotFoundException(Exception e) {
+	public ResponseEntity<Object> handleFileNotFoundException(Exception e) {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("エラーが発生しました。");
 	}
-	  
+
 	/**
 	 * ApplicationException時は400 Bad Request
 	 * 
@@ -37,7 +38,7 @@ public class RestApiControllerAdvice extends ResponseEntityExceptionHandler {
 	 * @return ResponseEntity
 	 */
 	@ExceptionHandler(ApplicationException.class)
-		public ResponseEntity<Object> handleFileNotFoundException(ApplicationException e) {
+	public ResponseEntity<Object> handleFileNotFoundException(ApplicationException e) {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("アプリケーションエラーが発生しました。");
 	}
 }

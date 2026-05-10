@@ -19,14 +19,15 @@ public class CommonServiceConfiguration {
 	/**
 	 * コンストラクタ（必要に応じて中身を追加すること）
 	 */
-	public CommonServiceConfiguration() {}
-	
+	public CommonServiceConfiguration() {
+	}
+
 	@Value("${server.port:8080}")
 	private Integer selfServerPort;
-	
+
 	@Value("${spring.application.name:default}")
 	private String serviceName;
-	
+
 	/**
 	 * Spring Boot起動直後に呼ばれる処理をBean登録
 	 * 
@@ -36,7 +37,7 @@ public class CommonServiceConfiguration {
 	AfterStartup afterStartup() {
 		return new AfterStartup();
 	}
-	
+
 	/**
 	 * Spring Boot停止直前に呼ばれる処理をBean登録
 	 * 

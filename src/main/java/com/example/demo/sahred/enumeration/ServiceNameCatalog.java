@@ -12,9 +12,9 @@ public enum ServiceNameCatalog {
 	SANDBOX_SERVICE("sandbox-service"),
 	/** sandbox-2nd-service */
 	SANDBOX_2ND_SERVICE("sandbox-2nd-service");
-	
+
 	private String serviceName;
-	
+
 	/**
 	 * コンストラクタ
 	 * 

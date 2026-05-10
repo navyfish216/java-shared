@@ -15,7 +15,8 @@ public class ProcessUtility {
 	/**
 	 * プライベートコンストラクタ(警告抑止)
 	 */
-	private ProcessUtility() {}
+	private ProcessUtility() {
+	}
 
 	/**
 	 * 処理名を取得

@@ -18,8 +18,9 @@ public class ApiClientConfiguration {
 	/**
 	 * コンストラクタ（必要に応じて中身を追加すること）
 	 */
-	public ApiClientConfiguration() {}
-	
+	public ApiClientConfiguration() {
+	}
+
 	@Bean
 	RestClient restClient(ObservationRegistry observationRegistry) {
 		return RestClient.builder()
@@ -29,11 +30,11 @@ public class ApiClientConfiguration {
 	}
 
 	ClientHttpRequestInterceptor logInterceptor = (request, body, execution) -> {
-	    Logger logger = LoggerFactory.getLogger("RestClientLogger");
-	    logger.info("URI         : {}", request.getURI());
-	    logger.info("HTTP Method : {}", request.getMethod());
-	    logger.info("Headers     : {}", request.getHeaders());
-	    return execution.execute(request, body);
+		Logger logger = LoggerFactory.getLogger("RestClientLogger");
+		logger.info("URI         : {}", request.getURI());
+		logger.info("HTTP Method : {}", request.getMethod());
+		logger.info("Headers     : {}", request.getHeaders());
+		return execution.execute(request, body);
 	};
-	
+
 }

@@ -21,21 +21,22 @@ public class BeforeStop {
 
 	@Autowired
 	private MessageSource messageSource;
-	
+
 	@Autowired
 	private CommonServiceConfiguration config;
-	
+
 	/**
 	 * コンストラクタ（必要に応じて中身を追加すること）
 	 */
-	public BeforeStop() {}
-	
-    /**
-     * Spring Boot停止直前に行う処理
-     */
-    @PreDestroy
-    public void executeBeforeStop() {
-    	//停止時の処理を記述
-    	log.info(messageSource.getMessage("sandbox.application.log.end", new String[]{config.getServiceName()}, Locale.getDefault()));
-    }
+	public BeforeStop() {
+	}
+
+	/**
+	 * Spring Boot停止直前に行う処理
+	 */
+	@PreDestroy
+	public void executeBeforeStop() {
+		//停止時の処理を記述
+		log.info(messageSource.getMessage("sandbox.application.log.end", new String[]{config.getServiceName()}, Locale.getDefault()));
+	}
 }

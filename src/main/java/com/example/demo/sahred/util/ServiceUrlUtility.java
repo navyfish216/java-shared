@@ -22,8 +22,9 @@ public class ServiceUrlUtility {
 	/**
 	 * プライベートコンストラクタ(警告抑止)
 	 */
-	private ServiceUrlUtility() {}
-	
+	private ServiceUrlUtility() {
+	}
+
 	/**
 	 * サービスのURLを取得
 	 * 
