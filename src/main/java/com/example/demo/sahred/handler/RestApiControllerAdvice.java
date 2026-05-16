@@ -15,12 +15,6 @@ import com.example.demo.sahred.exception.ApplicationException;
 public class RestApiControllerAdvice extends ResponseEntityExceptionHandler {
 
 	/**
-	 * プライベートコンストラクタ(警告抑止)
-	 */
-	private RestApiControllerAdvice() {
-	}
-
-	/**
 	 * Exception時は500 Internal Server Error
 	 * 
 	 * @param e Exception

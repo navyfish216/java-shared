@@ -13,12 +13,6 @@ public class ProcessUtility {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	/**
-	 * プライベートコンストラクタ(警告抑止)
-	 */
-	private ProcessUtility() {
-	}
-
-	/**
 	 * 処理名を取得
 	 * 
 	 * @return クラス名.メソッド名

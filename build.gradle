@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.3-SNAPSHOT'
+version = '0.0.4-SNAPSHOT'
 description = 'java-shared'
 
 java {
@@ -70,4 +70,14 @@ publishing {
 			}
 		}
 	}
+}
+
+tasks.withType(Javadoc) {
+	// JavaDocタスク実行時にデフォルトコンストラクタの記述がないクラスで警告が出るのを抑止するため
+	// DocLintのmissingグループを抑止する
+	// 【参考】
+	// https://stackoverflow.com/questions/77569272/how-to-suppress-javadoc-warnings-in-gradle-build
+	// https://stackoverflow.com/questions/34874175/disable-all-javadoc-in-gradle/36939917#36939917
+	// https://docs.oracle.com/javase/jp/18/docs/specs/man/javadoc.html#groups
+	options.addBooleanOption('Xdoclint:all,-missing', true)
 }

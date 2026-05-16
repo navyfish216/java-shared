@@ -16,12 +16,6 @@ import lombok.Data;
 @Data
 public class CommonServiceConfiguration {
 
-	/**
-	 * コンストラクタ（必要に応じて中身を追加すること）
-	 */
-	public CommonServiceConfiguration() {
-	}
-
 	@Value("${server.port:8080}")
 	private Integer selfServerPort;
 

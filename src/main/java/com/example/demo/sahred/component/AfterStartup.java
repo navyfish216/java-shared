@@ -26,12 +26,6 @@ public class AfterStartup {
 	private CommonServiceConfiguration config;
 
 	/**
-	 * コンストラクタ（必要に応じて中身を追加すること）
-	 */
-	public AfterStartup() {
-	}
-
-	/**
 	 * Spring Boot起動直後に行う処理
 	 */
 	@PostConstruct

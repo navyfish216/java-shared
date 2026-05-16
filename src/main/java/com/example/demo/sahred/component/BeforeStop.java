@@ -26,12 +26,6 @@ public class BeforeStop {
 	private CommonServiceConfiguration config;
 
 	/**
-	 * コンストラクタ（必要に応じて中身を追加すること）
-	 */
-	public BeforeStop() {
-	}
-
-	/**
 	 * Spring Boot停止直前に行う処理
 	 */
 	@PreDestroy

@@ -15,12 +15,6 @@ import io.micrometer.observation.ObservationRegistry;
 @Configuration
 public class ApiClientConfiguration {
 
-	/**
-	 * コンストラクタ（必要に応じて中身を追加すること）
-	 */
-	public ApiClientConfiguration() {
-	}
-
 	@Bean
 	RestClient restClient(ObservationRegistry observationRegistry) {
 		return RestClient.builder()

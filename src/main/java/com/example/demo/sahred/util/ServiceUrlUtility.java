@@ -20,12 +20,6 @@ public class ServiceUrlUtility {
 	private Map<String, String> map;
 
 	/**
-	 * プライベートコンストラクタ(警告抑止)
-	 */
-	private ServiceUrlUtility() {
-	}
-
-	/**
 	 * サービスのURLを取得
 	 * 
 	 * @param config ServiceConfig
